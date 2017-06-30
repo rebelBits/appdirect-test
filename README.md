@@ -42,6 +42,6 @@ Several options to run the app:
  * Application url: http://desolate-journey-69317.herokuapp.com/
    * the app contains a simple UI that lists the subscriptions and users
  * Appdirect app name: sample
-   _* The exported app profile can be found in the Product-168206.zip file_
+   * _The exported app profile can be found in the Product-168206.zip file_
 
 
