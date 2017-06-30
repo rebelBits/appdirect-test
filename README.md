@@ -35,6 +35,7 @@ The build will generate an war file.
 Several options to run the app:
 1. deploy the war file in Tomcat
 2. run the app using the embedded webcontainer: java -jar target/sample-0.0.1-SNAPSHOT.war
+
 (_deploying under heroku: '$>heroku war:deploy target/sample-0.0.1-SNAPSHOT.war --app your-app-name_')
 
 ## Other info ##
