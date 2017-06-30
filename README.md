@@ -38,6 +38,10 @@ Several options to run the app:
 
 (_deploying under heroku: '$>heroku war:deploy target/sample-0.0.1-SNAPSHOT.war --app your-app-name_')
 
+### Configuration ###
+The app can be configured by altering the application.properties file (https://github.com/rebelBits/appdirect-test/blob/master/src/main/resources/application.properties).
+
+
 ## Other info ##
  * Application url: http://desolate-journey-69317.herokuapp.com/
    * the app contains a simple UI that lists the subscriptions and users
