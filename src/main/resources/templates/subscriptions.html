@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Subscriptions</title>
+
+<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
+<link th:href="@{/css/metisMenu.min.css}" rel="stylesheet" />
+<link th:href="@{/css/dataTables.bootstrap.css}" rel="stylesheet" />
+<link th:href="@{/css/sb-admin-2.css}" rel="stylesheet" />
+<link th:href="@{/css/font-awesome.min.css}" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="wrapper">
+		<nav class="navbar navbar-default navbar-static-top" role="navigation"
+			style="margin-bottom: 0">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" th:href="@{/}">SampleApp</a>
+			</div>
+
+			<ul class="nav navbar-top-links navbar-right">
+				<li class="dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" th:href="@{/logout}"><i class="fa fa-sign-out fa-fw"></i>
+						Logout</a></li>
+			</ul>
+		</nav>
+
+		<div id="page-wrapper">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1 class="page-header">Subscriptions</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<table width="100%"
+								class="table table-striped table-bordered table-hover"
+								id="subscriptionsTable">
+								<thead>
+									<tr>
+										<th>Account Identifier</th>
+										<th>Account Status</th>
+										<th>Marketplace URL</th>
+										<th>Creator openID</th>
+										<th>Edition Code</th>
+										<th>Action</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr th:each="subscription : ${subscriptionList}">
+										<td th:text="${subscription.accountId}"></td>
+										<td th:text="${subscription.accountStatus}"></td>
+										<td th:text="${subscription.marketplaceUrl}"></td>
+										<td th:text="${subscription.creatorOpenId}"></td>
+										<td th:text="${subscription.editionCode}"></td>
+										<td><a
+											th:href="@{/subscription/__${subscription.accountId}__/users}">View
+												Users</a></td>
+
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
